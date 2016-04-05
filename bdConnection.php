@@ -1,5 +1,5 @@
 <?php
-$cn=mysql_connect("localhost","Cinvestrain","c1nv35tr41n")or die("Error en Conexion");
+$cn=mysql_connect("localhost","cinvestrain","c1nv35tr41n")or die("Error en Conexion");
 $db=mysql_select_db("cepario")or die("Error en Db");
 return($cn);
 return($db);
@@ -19,7 +19,7 @@ class Conexion  // se declara una clase para hacer la conexion con la base de da
 	function Conexion()
 	{
 	        $conection['server']="localhost";  //host
-		$conection['user']="Cinvestrain";         //  usuario
+		$conection['user']="cinvestrain";         //  usuario
 		$conection['pass']="c1nv35tr41n";             //password
 		$conection['base']="cepario";           //base de datos
 		
