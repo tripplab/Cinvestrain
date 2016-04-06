@@ -64,7 +64,7 @@ session_start();
     <link rel="stylesheet" href="Boos/styles.css">
     <script type="text/javascript" src="Busqueda_ajax.js"></script>
         <meta charset="UTF-8">
-            <title>Strain Collection</title> 
+            <title>CinveStrain 1.8</title> 
 
            
           
