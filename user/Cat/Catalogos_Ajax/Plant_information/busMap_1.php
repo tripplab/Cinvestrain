@@ -633,12 +633,12 @@ echo '</select>';
 
     <div>
         <label> Longitud</label>
-        <input class="cajas" type="text"  name="longitud" id="longitud" value="<?php echo $longitud;?>"  onKeyPress="return validar_monto(event)">
+        <input class="cajas" type="text"  name="longitud" id="longitud" value="<?php echo $longitud;?>"  onKeyPress="return soloNumerosCordenadas1(event)">
     </div> 
          <br>
     <div>
         <label> Latitud</label>
-        <input class="cajas" type="text"  name="latitud" id="latitud" value="<?php echo $latitud;?>" onKeyPress="return validar_monto(event)" >
+        <input class="cajas" type="text"  name="latitud" id="latitud" value="<?php echo $latitud;?>" onKeyPress="return soloNumerosCordenadas2(event)" >
     </div> 
           <br>
     <div>
@@ -659,7 +659,7 @@ echo '</select>';
 echo '<input type="checkbox" name="tis['.$row["Community_type_ID"].']" value="'.$row["Type"].'">';
 
 
-echo '<span class="Estilo1">'.$row["Type"].'</span><br>'; 
+echo '<span class="Estilo1">'.$row["Name"].'</span><br>'; 
 
 }
          ?> 
@@ -1043,6 +1043,69 @@ form.submit();
 };
 
    
+   
+   
+   
+   
+     function soloNumerosCordenadas1(e)
+    {
+        // capturamos la tecla pulsada
+        var teclaPulsada=window.event ? window.event.keyCode:e.which;
+ 
+        // capturamos el contenido del input
+        var valor=document.getElementById("longitud").value;
+ 
+        // 45 = tecla simbolo menos (-)
+        // Si el usuario pulsa la tecla menos, y no se ha pulsado anteriormente
+        // Modificamos el contenido del mismo añadiendo el simbolo menos al
+        // inicio
+        if(teclaPulsada==45 && valor.indexOf("-")==-1)
+        {
+            document.getElementById("longitud").value="-"+valor;
+        }
+ 
+        // 13 = tecla enter
+        // 46 = tecla punto (.)
+        // Si el usuario pulsa la tecla enter o el punto y no hay ningun otro
+        // punto
+        if(teclaPulsada==13 || (teclaPulsada==46 && valor.indexOf(".")==-1))
+        {
+            return true;
+        }
+ 
+        // devolvemos true o false dependiendo de si es numerico o no
+        return /\d/.test(String.fromCharCode(teclaPulsada));
+    }
+    
+     function soloNumerosCordenadas2(e)
+    {
+        // capturamos la tecla pulsada
+        var teclaPulsada=window.event ? window.event.keyCode:e.which;
+ 
+        // capturamos el contenido del input
+        var valor=document.getElementById("latitud").value;
+ 
+        // 45 = tecla simbolo menos (-)
+        // Si el usuario pulsa la tecla menos, y no se ha pulsado anteriormente
+        // Modificamos el contenido del mismo añadiendo el simbolo menos al
+        // inicio
+        if(teclaPulsada==45 && valor.indexOf("-")==-1)
+        {
+            document.getElementById("latitud").value="-"+valor;
+        }
+ 
+        // 13 = tecla enter
+        // 46 = tecla punto (.)
+        // Si el usuario pulsa la tecla enter o el punto y no hay ningun otro
+        // punto
+        if(teclaPulsada==13 || (teclaPulsada==46 && valor.indexOf(".")==-1))
+        {
+            return true;
+        }
+ 
+        // devolvemos true o false dependiendo de si es numerico o no
+        return /\d/.test(String.fromCharCode(teclaPulsada));
+    }
 </script>
  </div>
     </body>
