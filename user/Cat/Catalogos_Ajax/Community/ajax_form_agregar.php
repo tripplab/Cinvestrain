@@ -75,7 +75,7 @@ document.getElementById('desdeotro').style.display='none';
           </tr>
           <tr>
   <td>
-         <input type="radio" name="nom_per"  id="nom_per_3" value="Phillosphere"  onclick=" mostrarReferencia();" /> Phillosphere
+         <input type="radio" name="nom_per"  id="nom_per_3" value="Phyllosphere"  onclick=" mostrarReferencia();" /> Phyllosphere
       </td>
           </tr>
           <tr>
@@ -93,7 +93,7 @@ document.getElementById('desdeotro').style.display='none';
           <td id="desdeotro" style="display:none;">
          Level: 
     <input type="radio" name="ape_per"  id="ape_per_0" value="Root"  /> Root
-    <input type="radio" name="ape_per" id="ape_per_1" value="leaf"  /> leaf
+    <input type="radio" name="ape_per" id="ape_per_1" value="leaf"  /> Leaf
     <input type="radio" name="ape_per" id="ape_per_2" value="Seed"  /> Seed
     <input type="radio" name="ape_per"  id="ape_per_3" value="Fruit"   /> Fruit
      <input type="radio"   name="ape_per"  id="ape_per_4" value="  Flower"  /> Flower
