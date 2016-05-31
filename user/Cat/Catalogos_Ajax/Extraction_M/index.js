@@ -22,7 +22,7 @@ function fn_mostrar_frm_agregar(){
 		$.blockUI({
 			message: $('#div_oculto'),
 			css:{
-				top: '10%'
+				top: '15%'
 			}
 		}); 
 	});
@@ -33,7 +33,7 @@ function fn_mostrar_frm_modificar(ide_per){
 		$.blockUI({
 			message: $('#div_oculto'),
 			css:{
-				top: '10%'
+				top: '15%'
 			}
 		}); 
 	});
