@@ -104,7 +104,9 @@
         </script>
     </head>
     <body>
-        
+        <br>
+          <br>
+            <br>
         <div class="container">
             <h1> Assay tipe  </h1>
             <div id="respuesta" class="alert"></div>
