@@ -38,3 +38,4 @@ $sql1="SELECT lab.id_lab FROM user,lab WHERE user.Name ='$user' AND user.lab=lab
 
 
 ?>
+ 
