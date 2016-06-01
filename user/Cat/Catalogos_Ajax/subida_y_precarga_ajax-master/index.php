@@ -43,12 +43,12 @@
                     $("#barra_de_progreso").val(valor);
                 });
             }
-            function eliminarArchivos(archivo,id) {
+            function eliminarArchivos(archivo) {
                 $.ajax({
                     url: 'eliminar_archivo.php',
                     type: 'POST',
                     timeout: 10000,
-                    data: {archivo: archivo,id:id},
+                    data: {archivo: archivo},
                     error: function() {
                         mostrarRespuesta('Error al intentar eliminar el archivo.', false);
                     },
@@ -71,7 +71,7 @@
                             var html = '';
                             for (var i = 0; i < respuesta.length; i++) {
                                 if (respuesta[i] != undefined) {
-                                    html += '<div class="row"> <span class="col-lg-2"> ' + respuesta[i] + ' </span>  <div class="col-lg-2"> <a class="eliminar_archivo btn btn-danger" href="javascript:void(0);"> Delete </a> </div> </div> <hr />';
+                                    html += '<div class="row"> <span class="col-lg-2"> ' + respuesta[i] + ' </span>  <div class="col-lg-2"> <a class="eliminar_archivo btn btn-danger" href="javascript:void(0);"> Delete</a> </div> </div> <hr />';
                                 }
                             }
                         
@@ -95,18 +95,18 @@
                 });
                 $("#archivos_subidos").on('click', '.eliminar_archivo', function() {
                     var archivo = $(this).parents('.row').eq(0).find('span').text();
-                    var  id="9";
+                    
                     archivo = $.trim(archivo);
  
-                    eliminarArchivos(archivo,id);
+                    eliminarArchivos(archivo);
                 });
             });
         </script>
     </head>
     <body>
         <br>
-          <br>
-            <br>
+        <br>
+        <br>
         <div class="container">
             <h1> Assay tipe  </h1>
             <div id="respuesta" class="alert"></div>
