@@ -39,3 +39,4 @@ foreach ($directorio_escaneado as $item) {
 }
 echo json_encode($archivos);
 ?>
+ 
