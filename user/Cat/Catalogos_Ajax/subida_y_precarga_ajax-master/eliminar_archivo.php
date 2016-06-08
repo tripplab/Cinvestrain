@@ -20,8 +20,8 @@ $sql1="SELECT lab.id_lab FROM user,lab WHERE user.Name ='$user' AND user.lab=lab
     
     
     $archivo = $_POST['archivo'];
-    if (file_exists("archivos_subidos$consul2/$archivo")) {
-        unlink("archivos_subidos$consul2/$archivo");
+    if (file_exists("archivos_subidos0/$archivo")) {
+        unlink("archivos_subidos0/$archivo");
    
          
          $NombreArchivo=split(".",$archivo);
@@ -38,4 +38,3 @@ $sql1="SELECT lab.id_lab FROM user,lab WHERE user.Name ='$user' AND user.lab=lab
 
 
 ?>
- 
