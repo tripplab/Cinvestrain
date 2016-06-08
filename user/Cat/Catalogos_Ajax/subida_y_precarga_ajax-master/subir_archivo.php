@@ -33,7 +33,7 @@ if (isset($_FILES['archivo'])) {
 //        {
 //            $ruta="archivos_subidos.$consul2/Extraction_Method/$nombre";
 //        }
-        $ruta="archivos_subidos$consul2/$nombre";
+        $ruta="archivos_subidos0/$nombre";
  
     
     
@@ -47,7 +47,7 @@ if (isset($_FILES['archivo'])) {
 			
                         
                          $cs=mysql_query($query,$cn);
-    if (move_uploaded_file($archivo['tmp_name'], "archivos_subidos$consul2/$nombre")) {
+    if (move_uploaded_file($archivo['tmp_name'], "archivos_subidos0/$nombre")) {
         echo 1;
        
         
@@ -56,4 +56,3 @@ if (isset($_FILES['archivo'])) {
     }
 }
 ?>
- 
