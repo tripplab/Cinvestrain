@@ -71,7 +71,7 @@ $sql1="SELECT lab.id_lab FROM user,lab WHERE user.Name ='$user' AND user.lab=lab
                         
                         
                         
-  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0";		
+  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0 and lab='$consul2' ";		
 		$cs=mysql_query($sql,$cn);
 $cat=array();
 while($resul=mysql_fetch_array($cs)){
@@ -99,7 +99,7 @@ $rs_per = mysql_fetch_assoc($pe1);
  
 echo "Categoria: ".$NameCat."<br>";
 
-$sql3="select Description,Protocol from protocol where type='ASSAY' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
+$sql3="select Description,Protocol from protocol where Type='ASSAY' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
 
 $per3 = mysql_query($sql3);
 	$num_rs_per = mysql_num_rows($per3);
@@ -138,7 +138,7 @@ $per3 = mysql_query($sql3);
 
                 <?php
 
-  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0 ";		
+  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0 and lab='$consul2' ";		
 		$cs=mysql_query($sql,$cn);
 $cat=array();
 while($resul=mysql_fetch_array($cs)){
@@ -165,7 +165,7 @@ $rs_per = mysql_fetch_assoc($pe1);
  
 echo "Categoria: ".$NameCat."<br>";
 
-$sql3="select Description,Protocol from protocol where type='ExtraMe' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
+$sql3="select Description,Protocol from protocol where Type='ExtraMe' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
 
 $per3 = mysql_query($sql3);
 	$num_rs_per = mysql_num_rows($per3);
@@ -204,7 +204,7 @@ $per3 = mysql_query($sql3);
                     <br>
                 <?php
 
-  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0 ";		
+  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0 and lab='$consul2'  ";		
 		$cs=mysql_query($sql,$cn);
 $cat=array();
 while($resul=mysql_fetch_array($cs)){
@@ -233,7 +233,7 @@ $rs_per = mysql_fetch_assoc($pe1);
  
 echo "Categoria: ".$NameCat."<br>";
 
-$sql3="select Description,Protocol from protocol where type='PresMe' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
+$sql3="select Description,Protocol from protocol where Type='PresMe' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
 
 $per3 = mysql_query($sql3);
 	$num_rs_per = mysql_num_rows($per3);
@@ -274,7 +274,7 @@ $per3 = mysql_query($sql3);
 
                 <?php
 
-  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0 ";		
+  $sql="select DISTINCT  Id_Catalogo from protocol where Id_Catalogo <> 0 and lab='$consul2' ";		
 		$cs=mysql_query($sql,$cn);
 $cat=array();
 while($resul=mysql_fetch_array($cs)){
@@ -301,7 +301,7 @@ $rs_per = mysql_fetch_assoc($pe1);
  
 echo "Categoria: ".$NameCat."<br>";
 
-$sql3="select Description,Protocol from protocol where type='Seq' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
+$sql3="select Description,Protocol from protocol where Type='Seq' and Id_Catalogo='$cat[$i]' and lab='$consul2'";
 
 $per3 = mysql_query($sql3);
 	$num_rs_per = mysql_num_rows($per3);
