@@ -4,7 +4,25 @@
 
 include "../../../../bdConnection.php";
 
-?>
+
+require'../extras/class/sessions.php';
+$objses = new Sessions();
+$objses->init();
+
+
+          $user = isset($_SESSION['user']) ? $_SESSION['user'] : null ;
+  
+$sql1="SELECT lab.id_lab FROM user,lab WHERE user.Name ='$user' AND user.lab=lab.id_lab";		
+		$cs1=mysql_query($sql1,$cn);
+                
+		while($resul=mysql_fetch_array($cs1)){
+			$consul2=$resul[0];
+			}
+
+                $_SESSION["newsession"]="Other";
+
+                
+                ?>
 
 
  <meta charset="utf-8">
@@ -114,6 +132,7 @@ include "../../../../bdConnection.php";
                         <input type="text" name="nombre_archivo" id="nombre_archivo" />
                         <input type="hidden" name="id"  id="id" value="0" />
                         <input type="hidden" name="type" id="type" value="Other" />
+                        
                         <input type="hidden" name="lab" id="lab" value="<?php echo $consul2?>" />
                     </div>
                     <div class="col-lg-2">
