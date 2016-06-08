@@ -9,6 +9,10 @@
                  $type=$_POST["type"];
                
                 $lab=$_POST["labo"];
+                
+                
+                session_start();
+                $_SESSION["newsession"]=$type;
                 ?>
         <title>  </title>
         <meta charset="utf-8">
