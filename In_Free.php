@@ -33,7 +33,7 @@ include('menu_prin.php');
 
 <center>
 
-    <iframe id="mainContent" name="mainContent" src="./user/Cat/Catalogos_Ajax/Free/index.php" width="100%" height="160%" frameborder="0" style="margin: 0px; height: 160%;" scrolling="no" onload="resizeMe(this)">
+    <iframe id="mainContent" name="mainContent" src="./user/Cat/Catalogos_Ajax/Free/index.php" width="100%" height="160%" frameborder="0" style="margin: 0px; height: 160%;" scrolling="si" onload="resizeMe(this)">
     [Your user agent does not support frames or is currently configured
     not to display frames. However, you may visit
     &lt;A href="info_page_tabs.php"&gt;the related document.&lt;/A&gt;]
