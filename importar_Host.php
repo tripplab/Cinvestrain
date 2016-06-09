@@ -244,7 +244,7 @@ if(PHPExcel_Shared_Date::isDateTime($cell)) {
             }
             
             //planta
-             $objPlant->setActiveSheetIndex(2);
+             $objPlant->setActiveSheetIndex(1);
             $Id_laboratorio="";
             $Id_user="";
             $Id_storage="";
